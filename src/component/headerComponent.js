@@ -8,9 +8,9 @@ export default class HeaderComponent extends React.Component{
             <header className={'header'}>
                 <MainContainerComponent>
                    <header className="header__inner">
-                       {this.props.items.map((item)=>{
-                           
-                       })}
+                       {/*{this.props.items.map((item)=>{*/}
+                       {/*    */}
+                       {/*})}*/}
                    </header>
                 </MainContainerComponent>
             </header>

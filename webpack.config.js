@@ -1,9 +1,21 @@
 const path = require("path");
 const webpack = require("webpack");
 const htmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+const pathDist = path.resolve(__dirname,'dist/')
+const pathSrc = path.resolve(__dirname,'src/')
+
+const STYLE_LOADER = {
+    loader: MiniCssExtractPlugin.loader,
+    options: {
+        hmr: process.env.NODE_ENV === 'development',
+        reloadAll: true,
+    },
+};
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: `${pathSrc}/index.js`,
     mode: "development",
     module: {
         rules: [
@@ -17,6 +29,7 @@ module.exports = {
                 test: /\.s[ac]ss$/i,
                 use: [
                     "style-loader",
+                    STYLE_LOADER,
                     "css-loader",
                     {
                         loader: 'sass-loader',
@@ -27,38 +40,62 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(git|png|jpe?g|svg)$/i,
-                use: [
-                    'file-loader',
-                    {
-                        loader: "image-webpack-loader",
-                        options: {
-                            bypassOnDebug: true,
-                            disable: true,
-                        }
-                    }
-                ]
+                test: /\.(png|svg|jpg|gif)$/,
+                loader: 'file-loader',
+                exclude: /(StyleAssets)/,
+                options: {
+                    name: './assets/img/[name].[ext]',
+                },
+
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                loader: 'file-loader',
+                include: /(StyleAssets)/,
+                options: {
+                    esModule:false,
+                    name: '../assets/img/[name].[ext]',
+                },
+
             }
+            // {
+            //     test: /\.(git|png|jpe?g|svg)$/i,
+            //     use: [
+            //         'file-loader',
+            //         {
+            //             loader: "image-webpack-loader",
+            //             options: {
+            //                 bypassOnDebug: true,
+            //                 disable: true,
+            //             }
+            //         }
+            //     ]
+            // }
         ]
     },
     resolve: {
         extensions: ["*",".js",".jsx"]
     },
     output: {
-        path: path.resolve(__dirname ,"dist/"),
-        publicPath: "../dist/",
-        filename: "bundle.js"
+        path:pathDist,
+        filename: "./js/bundle.js"
     },
     devServer: {
-        contentBase: path.join(__dirname, "public/"),
         port: 3000,
-        publicPath: "http://localhost:3000/dist/",
-        hotOnly: true
+        open: true,
+        hot: true,
+        inline: true,
+
     },
     plugins: [
         new htmlWebpackPlugin({
-            filename: __dirname + "/public/index.html",
+            filename:`${pathDist}/index.html`,
             template: "./src/htmlTemplate.html"
+        }),
+        new MiniCssExtractPlugin({
+            filename: "./css/[name].css",
+            publicPath: './css',
+            chunkFilename: "./css/[id].css"
         }),
         new webpack.HotModuleReplacementPlugin()
     ]

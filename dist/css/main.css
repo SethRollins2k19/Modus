@@ -3,6 +3,10 @@
   max-width: 1200px;
   margin: 0 auto; }
 
-body {
-  background: white url(../assets/img/header-bg.png); }
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .header__inner .nav .nav__link:not(:last-of-type) {
+    margin-right: 40px; }
 

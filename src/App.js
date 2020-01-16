@@ -5,7 +5,7 @@ export default class App extends React.Component{
     render(){
         return(
             <div>
-                <HeaderComponent items={[{'#':'main'},{'#000':'second'}]}/>
+                <HeaderComponent links={['Home','About Us','Services','Careers','News','Documentation']}/>
                 MaINT theme
                 {/*<img src={bg} alt=""/>*/}
             </div>

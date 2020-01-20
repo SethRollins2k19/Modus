@@ -1,0 +1,30 @@
+@media (max-width: 1100px)
+  //header media queries
+  .header__inner
+    .nav
+      grid-template-columns: repeat(auto-fit,minmax(45px, 1fr))
+
+@media (max-width: 900px)
+  //header media queries
+  .header__inner
+    display: flex
+    flex-direction: column
+    position: relative
+    .logo
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      img
+        width: 150px
+    .nav
+      display: none
+    .btnBlock
+      display: none
+    .hamburgerMenu
+      display: block
+      position: absolute
+      right: 0
+      top: 27px
+      //transform: translateY(-50%)
+    .hamburgerMenu__inner
+      display: flex

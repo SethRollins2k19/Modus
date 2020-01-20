@@ -6,22 +6,26 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --progress --colors --hot --inline --open",
-    "build": "webpack --mode development"
+    "build": "webpack --mode production"
   },
   "author": "deninc",
   "license": "ISC",
+  "browserslist": ["ie >= 8", "last 4 version"],
   "devDependencies": {
     "@babel/cli": "^7.1.0",
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.7.4",
     "babel-loader": "^8.0.2",
     "css-loader": "^1.0.0",
+    "css-mqpacker": "^7.0.0",
     "file-loader": "^5.0.2",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.0",
+    "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^0.23.0",
     "webpack": "^4.41.5",

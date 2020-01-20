@@ -32,6 +32,16 @@ module.exports = {
                     STYLE_LOADER,
                     "css-loader",
                     {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: () => [require('autoprefixer')(),
+                                require('css-mqpacker')({
+                                    sort: true
+                                })
+                            ],
+                        }
+                    },
+                    {
                         loader: 'sass-loader',
                         options: {
                             sourceMap: true,

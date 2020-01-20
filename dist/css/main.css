@@ -1,12 +1,10 @@
-.main-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto; }
+.main-container{width:100%;max-width:1170px;padding:0 15px;margin:0 auto}
 
-.header__inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-  .header__inner .nav .nav__link:not(:last-of-type) {
-    margin-right: 40px; }
+.header__inner{padding:10px 0;display:grid;grid-template-columns:1fr 3fr 2fr;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.header__inner .nav{display:grid;grid-template-columns:repeat(auto-fit, minmax(80px, 1fr));-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-left:40px;-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly}.header__inner .nav .nav__link{padding:5px;color:rgba(31,32,65,0.5);font-weight:normal;-webkit-transition:color .6s linear, font-weight .6s linear;-o-transition:color .6s linear, font-weight .6s linear;transition:color .6s linear, font-weight .6s linear}.header__inner .nav .nav__link:hover{font-weight:bold;color:black}.header__inner .btnBlock{margin-left:40px;display:-webkit-box;display:-ms-flexbox;display:flex}.header__inner .btnBlock .btn:not(:last-of-type){margin-right:15px}
+
+.btn{padding:8px 20px;border:none;background:-webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));background:-o-linear-gradient(top, #BC9CFF 0%, #8BA4F9 100%);background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);border-radius:22px;border:none;position:relative;-webkit-transition:background .5s linear;-o-transition:background .5s linear;transition:background .5s linear}.btn:after{content:'';top:0;left:0;padding:4px;margin-left:-4%;margin-top:-2.7%;z-index:-1;border-radius:24px;width:108%;height:118%;position:absolute;background:-webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));background:-o-linear-gradient(top, #BC9CFF 0%, #8BA4F9 100%);background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)}.btn:hover,.btn:focus{background:white}.btn:hover .btn__text,.btn:focus .btn__text{color:#BC9CFF}.btn__text{text-transform:uppercase;font-weight:bold;color:white;-webkit-transition:color .5s linear;-o-transition:color .5s linear;transition:color .5s linear}
+
+body{padding:0;margin:0;font-size:14px}*,*:after,*:before{-webkit-box-sizing:border-box;box-sizing:border-box}a{color:black;text-decoration:none}
+
+@media (max-width: 1100px){.header__inner .nav{grid-template-columns:repeat(auto-fit, minmax(45px, 1fr))}}@media (max-width: 900px){.header__inner{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;position:relative}.header__inner .logo{position:absolute;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}.header__inner .nav{display:none}.header__inner .btnBlock{display:none}}
 

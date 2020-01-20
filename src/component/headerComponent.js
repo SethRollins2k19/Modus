@@ -2,7 +2,7 @@ import React from 'react'
 import MainContainerComponent from "../containers/mainContainer"
 import './style/headerStyle.sass'
 import Logo from "./logoComponent";
-
+import Btn from "./btnComponent";
 export default class HeaderComponent extends React.Component{
     constructor(props){
         super(props)
@@ -15,6 +15,11 @@ export default class HeaderComponent extends React.Component{
                    <header className="header__inner">
                         <Logo/>
                         <NavComponent linksArr={this.props.links}/>
+                        <div className={'btnBlock'}>
+                            <Btn title={'login'}/>
+                            <Btn title={'register'}/>
+                        </div>
+                       <HamburgerMenu/>
                    </header>
                 </MainContainerComponent>
             </header>
@@ -23,7 +28,7 @@ export default class HeaderComponent extends React.Component{
 }
 
 function NavComponent(props) {
-    const links = props.linksArr.map(link=><LinkComponent linkTitle={link}/>)
+    const links = props.linksArr.map((link,keys)=><LinkComponent key={keys} linkTitle={link}/>)
     return (
         <nav className={'nav'}>
             {links}
@@ -34,5 +39,14 @@ function NavComponent(props) {
 function LinkComponent(props){
     return (
         <a href={"#"} className={'nav__link'}>{props.linkTitle}</a>
+    )
+}
+function HamburgerMenu (props) {
+    return (
+        <div className={'hamburgerMenu'}>
+            <div className={'hamburgerMenu__inner'}>
+
+            </div>
+        </div>
     )
 }

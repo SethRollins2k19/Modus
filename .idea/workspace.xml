@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d873513c-1eb9-402f-9e02-33f1b957eece" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/header-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/img/header-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/img/HambMenu.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/js/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/headerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/headerComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/logoComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/logoComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/style/headerStyle.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/style/headerStyle.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/ContainersStyle.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ContainersStyle.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/htmlTemplate.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/htmlTemplate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +64,7 @@
       <workItem from="1579382432092" duration="2808000" />
       <workItem from="1579437265944" duration="13327000" />
       <workItem from="1579501286513" duration="3943000" />
-      <workItem from="1579548693311" duration="6705000" />
+      <workItem from="1579548693311" duration="7072000" />
     </task>
     <servers />
   </component>
